@@ -1,5 +1,5 @@
 def tic_tac_toe():
-  pass
+  print("test")
 
 def snake_game(): 
   pass

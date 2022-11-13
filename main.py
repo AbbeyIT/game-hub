@@ -53,7 +53,7 @@ class Turn(GuessingGame):
 
                 if failed == 0:
                         
-                        print("\n\nYou Win!")
+                        print("\n\nYou Win")
 
                         print("The word is: ", word)
                         break

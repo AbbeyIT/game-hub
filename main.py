@@ -4,72 +4,72 @@ def tic_tac_toe():
 def word_guessing_game(): 
   import random
 
-class Name:
-    def yourname(you):
-        name = input("What is your name? ")
-        print("Good Luck, ", name)
+  class Name:
+      def yourname(you):
+          name = input("What is your name? ")
+          print("Good Luck, ", name)
 
-class Category(Name):
-    def game(cate):
-        print()
-        print("Category: Technology")
-        print()
+  class Category(Name):
+      def game(cate):
+          print()
+          print("Category: Technology")
+          print()
 
-k = Category()
-k.yourname()
-k.game()
+  k = Category()
+  k.yourname()
+  k.game()
 
-words = ['phone', 'computer', 'television', 'programming',
-		'python', 'internet', 'database', 'machine',
-		'games', 'gadgets']
-
-
-word = random.choice(words)
+  words = ['phone', 'computer', 'television', 'programming',
+                  'python', 'internet', 'database', 'machine',
+                  'games', 'gadgets']
 
 
-print("Guess the characters")
-
-guesses = ''
-
-turns = 12
+  word = random.choice(words)
 
 
-while turns > 0:
+  print("Guess the characters")
 
-	failed = 0
+  guesses = ''
 
-	for char in word:
+  turns = 12
 
-		if char in guesses:
-			print(char, end=" ")
 
-		else:
-			print("_")
+  while turns > 0:
 
-			failed += 1
+          failed = 0
 
-	if failed == 0:
-		print("\n\nYou Win!")
+          for char in word:
 
-		print("The word is: ", word)
-		break
+                  if char in guesses:
+                          print(char, end=" ")
 
-	print()
-	guess = input("\nguess a character:")
+                  else:
+                          print("_")
 
-	guesses += guess
+                          failed += 1
 
-	if guess not in word:
+          if failed == 0:
+                  print("\n\nYou Win!")
 
-		turns -= 1
+                  print("The word is: ", word)
+                  break
 
-		print("Wrong")
-		print()
+          print()
+          guess = input("\nguess a character:")
 
-		print("You have", + turns, 'more guesses')
+          guesses += guess
 
-		if turns == 0:
-			print("You Loose...")
+          if guess not in word:
+
+                  turns -= 1
+
+                  print("Wrong")
+                  print()
+
+                  print("You have", + turns, 'more guesses')
+
+                  if turns == 0:
+                          print("You Lose...")
 
 
 def rock_paper_scissors():    

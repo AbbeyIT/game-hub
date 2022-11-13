@@ -28,7 +28,7 @@ def main():
             wordGuess()
         elif choice == "5":
             sudoku()
-        elif choice == "5":
+        elif choice == "6":
             break
         else:
             print("Invalid choice")

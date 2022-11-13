@@ -4,7 +4,7 @@ def tic_tac_toe():
 def word_guessing_game(): 
   import random
 
-class Name():
+class Name:
     def yourname(you):
         name = input("What is your name? ")
         print("Good Luck, ", name)
@@ -19,69 +19,58 @@ k = Category()
 k.yourname()
 k.game()
 
-class GuessingGame:
-    def Game(self):
-        self.words = ['phone', 'computer', 'television', 'programming',
+words = ['phone', 'computer', 'television', 'programming',
 		'python', 'internet', 'database', 'machine',
 		'games', 'gadgets']
 
-        word = random.choice(self.words)
-        
-        
+
+word = random.choice(words)
+
+
 print("Guess the characters")
 
 guesses = ''
 
-class Turn(GuessingGame):
-    def turns(start):
-        turns = 12
+turns = 12
 
 
-        while turns > 0:
+while turns > 0:
 
-                failed = 0
+	failed = 0
 
-                for char in word:
+	for char in word:
 
-                        if char in guesses:
-                                print(char, end=" ")
+		if char in guesses:
+			print(char, end=" ")
 
-                        else:
-                                print("_")
-    
-                                failed += 1
+		else:
+			print("_")
 
-                if failed == 0:
-                        
-                        print("\n\nYou Win")
+			failed += 1
 
-                        print("The word is: ", word)
-                        break
+	if failed == 0:
+		print("\n\nYou Win!")
 
-                print()
-                guess = input("\nguess a character:")
+		print("The word is: ", word)
+		break
 
-                guesses += guess
+	print()
+	guess = input("\nguess a character:")
 
-                if guess not in word:
+	guesses += guess
 
-                        turns -= 1
+	if guess not in word:
 
-                        print("Wrong")
-                        print()
-    
-                        print("You have", + turns, 'more guesses')
+		turns -= 1
 
-                        if turns == 0:
-                                print("You Loose...")
+		print("Wrong")
+		print()
 
+		print("You have", + turns, 'more guesses')
 
-obj1 = GuessingGame()
-obj2 = Turn()
+		if turns == 0:
+			print("You Loose...")
 
-for about in (obj1, obj2):
-    about.Game()
-    about.turns()
 
 def rock_paper_scissors():    
   pass

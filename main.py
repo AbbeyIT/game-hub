@@ -50,18 +50,12 @@ def trivia():
     print("Mark:", str(mark) + '%')
     print('Goodbye')
 
-    ans1 = input('You want to try again? (YES/NO): ')
-    if ans1.lower() == 'yes' or ans1.upper() == 'yes':
-        main()
-    else:
-        exit()
-
         
 def rock_paper_scissors():
     pass
 
 def wordGuess():
-     import random
+    import random
 
     class Name:
         def yourname(you):

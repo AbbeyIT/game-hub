@@ -19,7 +19,7 @@ def trivia():
             else:
                 print("Incorrect")
 
-            ans = input("2. What place in the Philippines is also known as the “walled city”?: ")
+            ans = input('2. What place in the Philippines is also known as the “walled city?": ')
             if ans.lower() == 'intramuros':
                 score += 1
                 print("Correct!")

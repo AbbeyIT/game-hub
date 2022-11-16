@@ -2,15 +2,18 @@ def mathGame():
     pass
 
 def trivia():
-    print("Hello, Welcome to Philippines Trivia!")
+    print("\nWelcome to the Philippines Trivia Game!")
+    name = input("\nEnter you name: ")
+    print("Hello %s," % (name), "have fun!")
+    ans = input("\nAre you ready to play, %s? (YES/NO): " % (name))
 
-    ans = input("Are you ready to play? (YES/NO): ")
     score = 0
-    total_q = 4                
+    total_questions = 5               
 
+    print("\nTrivia Question")
     if ans.lower() == 'yes':
             ans = input("1. Name the oldest Philippine city.: ")
-            if ans == 'cebu':
+            if ans.lower() == 'cebu':
                 score += 1
                 print("Correct!")
             else:
@@ -44,11 +47,12 @@ def trivia():
             else:
                 print("Incorrect")
 
-    print("Thank you for playing, you got", score, "correct answer/s!")
-    mark = (score/total_q) * 100
+    print("\nThank you for playing; you got", score, "correct answer/s!")
+    mark = (score/total_questions) * 100
 
     print("Mark:", str(mark) + '%')
-    print('Goodbye')
+    print('\nGoodbye %s.' %(name), "Thank you for playing Philippines Trivia Game.")
+    print()
 
         
 def rock_paper_scissors():

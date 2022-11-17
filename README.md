@@ -1,3 +1,4 @@
+![Game Hub Banner](https://github.com/AbbeyIT/game-hub/blob/main/images/game-hub%20banner.png)
 
 <p align="center">
     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/AbbeyIT/game-hub">

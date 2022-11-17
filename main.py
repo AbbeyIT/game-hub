@@ -367,11 +367,94 @@ def wordGuess():
 
 
 def sudoku():
-    pass
+    import random
 
+    def greeting():
+        greeting = "--- WELCOME TO SUDOKU! ---"
+        print ("-" * len(greeting))
+        print (greeting)
+        print ("-" * len(greeting))
+
+    greeting()
+    name = input("\nEnter you name: ")
+    print("Hello %s," % (name), "have fun!")
+
+    def duplicate_checker(a):
+            b = set(a)
+            result = len(a) != len(b)
+
+            if(result == True):
+                return True
+                
+    def check_row(a):
+        for x in a:
+            if(duplicate_checker(x) == True):
+                return True
+
+    def check_column(a):
+        for y in range(len(a)):
+            list = []
+            for x in a:
+                list.append(x[y])
+            if(duplicate_checker(list) == True):
+                return True
+            
+    def display_grid(grid):
+        print("")
+        count = 1
+        print("   1  2  3")
+        for x in grid:
+            
+            print(count,x,end=" ")
+            count+=1
+            print()
+            
+    def randomNumber(grid):
+        for x in range(6):
+            y = random.randint(0,2)
+            x = random.randint(0,2)
+            grid[x][y] = 0
+
+    grid = [[1, 2, 3],[3, 1, 2] ,[2, 3, 1]]
+
+    solved = False
+    randomNumber(grid)
+    display_grid(grid)
+
+    while solved != True:
+        y = int(input("Enter row [between 1-3] "))-1
+        x = int(input("Enter column [between 1-3] "))-1
+        num = int(input("Enter number to insert "))
+        
+        if grid[y][x] == 0:
+            grid[y][x] = num
+        else:
+            if input("Do you want to overwrite? [y/n]") == "y":
+                grid[y][x] = num
+            
+        display_grid(grid)
+        full = True
+        for x in grid:
+            for y in x:
+                if(y == 0):
+                    full = False
+        if(full ==True):
+            if(check_row(grid) == True or check_column(grid) == True):
+                print("Try again")
+            else:
+                print("Congratulations! You solved it :)")
+                solved =True
+    
+    print('\nGoodbye %s.' %(name), "Thank you for playing Sudoku.")
+    print()
 
 def main():
+    title = "--- WELCOME TO GAME HUB! ---"
+    print ("-" * len(title))
+    print(title)
+    print ("-" * len(title))
     while True:
+        print("Choose a game")
         print("1. Math Game\n2. Trivia\n3. Rock Paper Scissor\n4. Word Guessing Game\n5. Sudoku\n6. Exit")
         choice = input("Enter your choice: ")
         if choice == "1":

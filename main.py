@@ -170,7 +170,6 @@ def trivia():
 def rock_paper_scissors():
     from random import randint
 
-
     class rock_paper_scissors:
         def __init__(self):
             self.choices = "rock", "paper", "scissors"
@@ -182,21 +181,18 @@ def rock_paper_scissors():
             while True:
                 try:
                     option = int(input('Choose an option between Rock (1), Paper (2), Scissors (3): '))
-
                     if 1 <= option <= 3:
                         break
                     else:
                         print('You can only enter a number between 1, 2 and 3.')    
                 except ValueError:
                     print('The value entered is invalid. You can only enter numeric values.')
-
             return option
 
         def computer_move(self):
             return randint(1,3)
             
         def check_winner(self):
-            
             if self.player_wins == self.computer_wins:
                 return 'Tie.'
             elif self.player_wins > self.computer_wins:
@@ -276,8 +272,6 @@ def rock_paper_scissors():
         game.main()
 
 
-
-
 def wordGuess():
     import random
     
@@ -313,49 +307,33 @@ def wordGuess():
             'python', 'internet', 'database', 'machine',
             'games', 'gadgets']
 
-
     word = random.choice(words)
-
-
     print("Guess the characters")
-
     guesses = ''
-
     turns = 12
 
-
     while turns > 0:
-
         failed = 0
 
         for char in word:
-
             if char in guesses:
                 print(char, end=" ")
-
             else:
                 print("_")
-
                 failed += 1
 
         if failed == 0:
             print("\n\nYou Win!")
-
             print("The word is: ", word)
             break
 
         print()
         guess = input("\nguess a character:")
-
         guesses += guess
 
         if guess not in word:
-
             turns -= 1
-
-            print("Wrong")
-            print()
-
+            print("\nWrong")
             print("You have", + turns, 'more guesses')
 
             if turns == 0:
@@ -474,4 +452,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

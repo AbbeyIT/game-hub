@@ -131,7 +131,7 @@ def trivia():
             else:
                 print("Incorrect")
 
-            ans = input("2. What place in the Philippines is also known as the “walled city?": ")
+            ans = input("2. What place in the Philippines is also known as the “walled city”?: ")
             if ans.lower() == 'intramuros':
                 score += 1
                 print("Correct!")
@@ -440,7 +440,7 @@ def sudoku():
                     full = False
         if(full ==True):
             if(check_row(grid) == True or check_column(grid) == True):
-                print("Try again")
+                print("Try again.")
             else:
                 print("Congratulations! You solved it :)")
                 solved =True

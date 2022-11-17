@@ -361,9 +361,9 @@ def wordGuess():
             if turns == 0:
                 print("You Lose...")
                 
-     def bye(obj):
+    def bye(obj):
         obj.goodbye()
-     bye(playerOne)
+    bye(playerOne)
 
 
 def sudoku():

@@ -1,5 +1,117 @@
 def mathGame():
-    pass
+    import random
+    import time
+    import operator
+
+    def display_intro():
+        title = "--- MATH QUIZ GAME ---"
+        print ("-" * len(title))
+        print(title)
+        print ("-" * len(title))
+        time.sleep(1)
+
+    def greeting():
+        greeting = "--- WELCOME TO MATH BRAIN TEASER! ---"
+        print ("-" * len(greeting))
+        print (greeting)
+        print ("-" * len(greeting))
+
+    class Player:
+        def __init__(self, name):
+            self.name = name
+
+        def intro(self):
+            print ("Hello " + self.name + ", have fun!\n")
+
+        def outro(self):
+            print("\nThank you " + self.name + " for playing!")
+
+    def display_menu():
+        menu_list = [" o EASY", " o AVERAGE", " o HARD"]
+        print(menu_list[0])
+        print(menu_list[1])
+        print(menu_list[2])
+        print()
+
+    def user_level():
+        while True:
+                try:
+                    level = str(input("Choose your level: "))
+
+                    if level =="EASY" or level=="easy":
+                        return level
+                    elif level =="AVERAGE" or level=="average":
+                        return level
+                    elif level =="HARD" or level=="hard":
+                        return level
+                    else:
+                        print("Invalid option.")
+                        continue
+                except:
+                    print('Invalid.')
+                    continue
+
+    def random_problem():
+        operators = {
+            '+': operator.add,
+            '-': operator.sub,
+            '*': operator.mul,
+        }
+
+        num1 = random.randint(1,10)
+        num2 = random.randint(1,10)
+        operation = random.choice(list(operators.keys()))
+        answer = operators.get(operation)(num1, num2)
+        print(f'{num1}{operation}{num2}')
+        return answer
+
+    def question():
+        while True:
+            try:
+                answer = random_problem()
+                guess = int(input())
+            except:
+                print ("Invalid answer. Next question...")
+                continue
+            return guess == answer
+
+    def display_outro():
+        print()
+        title = "--- THE END ---"
+        print ("-" * len(title))
+        print(title)
+        print ("-" * len(title))
+
+    def game():
+        display_intro()
+        name = str(input("Please enter your name: "))
+        player = Player(name)
+        greeting()
+        player.intro()
+        display_menu()
+        level = user_level()
+        if level == "EASY" or level=="easy":
+            score = 0
+            for x in range(5):
+                if question() == True:
+                    score += 1
+        if level == "AVERAGE" or level=="average":
+            score = 0
+            for x in range(10):
+                if question() == True:
+                    score += 1
+        if level == "HARD" or level=="hard":
+            score = 0
+            for x in range(20):
+                if question() == True:
+                    score += 1
+
+        print(f'Your score is {score}')
+        player.outro()
+        display_outro()
+
+    game()
+
 
 def trivia():
     print("\nWelcome to the Philippines Trivia Game!")

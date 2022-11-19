@@ -263,7 +263,7 @@ def rock_paper_scissors():
                 elif choice == 3:
                     print("Goodbye! Thank you for playing ROCK PAPER SCISSOR Game.")
                     print(self.spacer(), '\n')
-                    main()
+                    break
                 else:
                     print("You have entered a number that isn't in the list.")
 

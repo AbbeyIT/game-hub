@@ -294,7 +294,7 @@ def wordGuess():
         obj.introduce()
     intro(playerOne)
 
-    class Category(Name):
+    class Category():
         def game(cate):
             print()
             print("Category: Technology")

@@ -28,6 +28,10 @@
 
 ## ⚡ How to play the game
 
+Open your desired terminal
+    
+    cd <folder>
+
 To download the game:
 
     git clone https://github.com/AbbeyIT/game-hub.git

@@ -5,6 +5,7 @@
     <img alt="issue" src="https://img.shields.io/github/issues/AbbeyIT/game-hub">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr-raw/AbbeyIT/game-hub">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/AbbeyIT/game-hub">
+    <img alt="GitHub" src="https://img.shields.io/github/license/AbbeyIT/game-hub">
 </p>
 
 <p align="center"> 

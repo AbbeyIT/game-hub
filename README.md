@@ -57,6 +57,7 @@ Thanks go to these wonderful team:
       <td align="center"><a href="https://github.com/janicanaldo"><img src="https://avatars.githubusercontent.com/u/92843119?v=4" width="100px;" alt="Janica Naldo"/><br /><sub><b>Janica Naldo</b></sub></a><br /><a href="" title="Rock Paper Scissors">🪨📄✂</a></td>
       <td align="center"><a href="https://github.com/kylieorga"><img src="https://avatars.githubusercontent.com/u/117880182?v=4" width="100px;" alt="Christine Kylie Oroga"/><br /><sub><b>Christine Kylie Oroga</b></sub></a><br /><a href="" title="Word Guessing Game">🔠❓</a></td>
       <td align="center"><a href="https://github.com/AbbeyIT"><img src="https://avatars.githubusercontent.com/u/93916892?v=4" width="100px;" alt="Abbey Santos"/><br /><sub><b>Abbey Santos</b></sub></a><br /><a href="" title="Sudoku">📄🔢🇯🇵</a></td>
+    </tr>
   </tbody>
 </table>
 
